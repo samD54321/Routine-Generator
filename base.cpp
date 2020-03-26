@@ -93,8 +93,8 @@ TableFrame::TableFrame(const wxString& title1) :wxFrame(NULL, wxID_ANY, title1)
 
 	wxGrid* grid = new wxGrid(this, wxID_ANY);
 	grid->CreateGrid(6, 8);
-	grid->SetRowSize(0, 60);
-	grid->SetColSize(0, 120);
+	for(int i=0;i<6;i++)	grid->SetRowSize(i, 60);
+	for(int i=0;i<8;i++)	grid->SetColSize(i, 120);
 
 	for (int day = 0; day < 6; day++)
 	{
@@ -103,6 +103,7 @@ TableFrame::TableFrame(const wxString& title1) :wxFrame(NULL, wxID_ANY, title1)
 			grid->SetCellValue(day, period, c1.Timetable[day][period]);
 		}
 	}
+	Maximize();
 }
 
 
