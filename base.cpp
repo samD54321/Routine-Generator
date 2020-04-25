@@ -7,7 +7,6 @@ EVT_BUTTON(ID_AddCR, MyFrame::OnAddCR)
 EVT_BUTTON(ID_AddLA, MyFrame::OnAddLA)
 EVT_BUTTON(ID_AddDR, MyFrame::OnAddDR)
 EVT_BUTTON(ID_GenTableS, MyFrame::OnGenTableS)
-EVT_BUTTON(ID_GenTableT, MyFrame::OnGenTableT)
 EVT_BUTTON(ID_Quit, MyFrame::OnQuit)
 END_EVENT_TABLE()
 
@@ -51,10 +50,10 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
 	wxBoxSizer* hbox2 = new wxBoxSizer(wxHORIZONTAL);
 	
 	GenTableS = new wxButton(panel, ID_GenTableS, "Generate Table (For Students)", wxDefaultPosition, wxSize(300, 100));
-	GenTableT = new wxButton(panel, ID_GenTableT, "Generate Table (For Teachers)", wxDefaultPosition, wxSize(300, 100));
+	
 	
 	hbox2->Add(GenTableS);
-	hbox2->Add(GenTableT);
+	
 	
 	vbox->Add(hbox2, 0, wxCENTRE);
 
